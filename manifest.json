@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Tweet Buttons",
+  "version": "1.0",
+  "description": "Add buttons to view interaction stats on a tweet",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
